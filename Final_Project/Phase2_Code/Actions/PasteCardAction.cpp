@@ -33,12 +33,24 @@ void PasteCardAction::Execute()
 {
 	ReadActionParameters();
 	Card::CountCard++;
-	Card* pCard = NULL; // will point to the card object type
 	Grid* pGrid = pManager->GetGrid();
-	//first we have to check a card in the clicked cell
+
+	Card* pCard = NULL;		// will point to a card if exists in the same clicked cell
+	Ladder* pLadder = NULL; // will point to a ladder if exists in the same clicked cell
+	Snake* pSnake = NULL; // will point to a ladder if exists in the same clicked cell
+	
+	//VALIDATIONS
+	//checking if there was a card in the same clicked cell
 	pCard = pGrid->HasCard(newCardPosition);
+	pLadder = pGrid->HasLadder(newCardPosition);
+	pSnake = pGrid->HasSnake(newCardPosition);
+
 	if (pCard != NULL)
-		pGrid->PrintErrorMessage("You've clicked on a cell that already contains a CARD!");
+		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that already contains a CARD!");
+	else if (pLadder != NULL)
+		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that contains a start of a LADDER!");
+	else if (pSnake != NULL)
+		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that contains a start of a SNAKE!");
 	else
 	{
 		pCard = pGrid->GetClipboard();

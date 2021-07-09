@@ -69,6 +69,15 @@ Card* Grid::HasCard(CellPosition pos)
 	return (CellList[pos.VCell()][pos.HCell()]->HasCard());
 }
 
+Snake* Grid::HasSnake(CellPosition pos)
+{
+	return (CellList[pos.VCell()][pos.HCell()]->HasSnake());
+}
+
+Ladder* Grid::HasLadder(CellPosition pos)
+{
+	return (CellList[pos.VCell()][pos.HCell()]->HasLadder());
+}
 
 void Grid::RemoveObjectFromCell(const CellPosition & pos)
 {

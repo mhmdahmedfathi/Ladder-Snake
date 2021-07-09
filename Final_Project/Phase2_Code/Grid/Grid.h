@@ -65,6 +65,9 @@ public:
 	///TODO: add any needed setter/getter "EXCEPT" ANY setters or getters of "CellList" or "PlayerList" (Forbidden for class Responsibilities)
 	GameObject* GetGameObjects(const CellPosition& position);
 	Card* HasCard(CellPosition pos);
+	Ladder* HasLadder(CellPosition pos);
+	Snake* HasSnake(CellPosition pos);
+
 	// ========= Other Getters =========
 	void SetCurrentPlayer(int x);
 
