@@ -3,6 +3,8 @@
 #include "../GUIClasses/Input.h"
 #include "../GUIClasses/Output.h"
 #include "../GameObjects/Ladder.h"
+#include "../GameObjects/Snake.h"
+#include "../GameObjects/Cards/Card.h"
 
 AddLadderAction::AddLadderAction(ApplicationManager* pApp) : Action(pApp)
 {
@@ -20,6 +22,7 @@ void AddLadderAction::ReadActionParameters()
 	Output* pOut = pGrid->GetOutput();	//Get a pointer to the output
 	Input* pIn = pGrid->GetInput();		//Get a pointer to the input
 	Ladder* pladder;					//Get a pointer to the Ladder
+	Snake* psnake;						//Get a pointer to the Snake
 	CellPosition NextLadderStart;		//Get a pointer to the StartCell of the ladder
 	CellPosition NextLadderEnd;			//Get a pointer to the EndCell of the ladder
 	
@@ -46,7 +49,22 @@ void AddLadderAction::ReadActionParameters()
 		Valid = false;
 		return;
 	}
+	for (int i = startPos.VCell(); i >= 0; i--) {
+		CellPosition StartPos = startPos;
+		StartPos.SetVCell(i);
+		psnake = pGrid->GetNextSnake(StartPos);
 
+		if (psnake != NULL && psnake->GetPosition().HCell() == startPos.HCell())
+		{
+			if (psnake->GetEndPosition().GetCellNum() == startPos.GetCellNum()) {
+				pOut->PrintMessage("Invalid: Start cell can't be an end of a snake. Click to Continue...");
+				pIn->GetPointClicked(x, y);
+				pOut->ClearStatusBar();
+				Valid = false;
+				return;
+			}
+		}
+	}
 	for (int i = 8; i >= startPos.VCell(); i--)
 	{
 		CellPosition StartPos = startPos;
@@ -77,6 +95,7 @@ void AddLadderAction::ReadActionParameters()
 			}
 		}
 	}
+
 	// Read the endPos parameter
 	pOut->PrintMessage("New Ladder: Click on its End Cell ...");
 	endPos = pIn->GetCellClicked();
@@ -109,7 +128,7 @@ void AddLadderAction::ReadActionParameters()
 					pOut->PrintMessage("Two ladders cannot overlap. Click to Continue...");
 				}
 				else if (endPos.VCell() == NextLadderStart.VCell()) {
-					pOut->PrintMessage("Start cell cannot be a end of another ladder. Click to Continue...");
+					pOut->PrintMessage("End cell cannot be a start of another ladder. Click to Continue...");
 				}
 				else {
 					continue;
@@ -124,15 +143,15 @@ void AddLadderAction::ReadActionParameters()
    
    GameObject* pGameobject = pGrid->GetGameObjects(endPos);
 
-   if (pGameobject != NULL && pGameobject->GetPosition().GetCellNum() == endPos.GetCellNum())
+   if (pGameobject != NULL && dynamic_cast<Snake*>(pGameobject) != NULL && pGameobject->GetPosition().GetCellNum() == endPos.GetCellNum())
    {
-	   pOut->PrintMessage("Invalid: end cell cannot contain a game object. Click to Continue...");
+	   pOut->PrintMessage("Invalid: end cell cannot be a start of a snake. Click to Continue...");
 	   pIn->GetPointClicked(x, y);
 	   pOut->ClearStatusBar();
 	   Valid = false;
 	   return;
    }
-
+   
 	pOut->ClearStatusBar();
 	// Clear messages
 }

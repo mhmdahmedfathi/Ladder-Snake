@@ -21,7 +21,7 @@ void AddSnakeAction::ReadActionParameters()
 	Grid* pGrid = pManager->GetGrid();//get a pointer to the Grid
 	Output* pOut = pGrid->GetOutput();//Get a pointer to the output
 	Input* pIn = pGrid->GetInput();//GEt a pointer to the input
-	Snake *pSnake;//GEt a pointer to the Snake
+	Snake* pSnake;//GEt a pointer to the Snake
 	CellPosition NextSnakeStart;//GEt a pointer to the StartCell of the Snake
 	CellPosition NextSnakeEnd;//GEt a pointer to the EndCell of the Snake
 	// Read the startPos parameter
@@ -36,6 +36,14 @@ void AddSnakeAction::ReadActionParameters()
 		Valid = false;
 		return;
 	}
+	else if (startPos.GetCellNum() == 99) {
+		pOut->PrintMessage("Invalid: the start of a Snake can't be cell 99. Click to Continue...");
+		pIn->GetPointClicked(x, y);
+		pOut->ClearStatusBar();
+		Valid = false;
+		return;
+	}
+
 	for (int i = 8; i >= endPos.VCell(); i--)
 	{
 		CellPosition StartPos = startPos;//initialize the StartPos Hcell
