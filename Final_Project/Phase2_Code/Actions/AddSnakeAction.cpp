@@ -30,7 +30,7 @@ void AddSnakeAction::ReadActionParameters()
 	//Check the Validation of StartPosition
 	if (startPos.VCell() == 8)
 	{
-		pOut->PrintMessage("Check Snake Specification");
+		pOut->PrintMessage("Invalid: the start of a Snake can't be the most lower row. Click to Continue...");
 		pIn->GetPointClicked(x, y);
 		pOut->ClearStatusBar();
 		Valid = false;
