@@ -19,6 +19,8 @@ public:
 
 	CellPosition GetEndPosition() const; // A getter for the endCellPos data member
 
+	CellPosition GetStartPosition() const; // A getter for the startCellPos of the ladder
+
 	virtual void Save(ofstream& OutFile, type T);
 
 	virtual void Load(ifstream& Infile);

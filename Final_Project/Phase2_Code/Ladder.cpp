@@ -22,10 +22,7 @@ void Ladder::Draw(Output* pOut) const
 
 void Ladder::Apply(Grid* pGrid, Player* pPlayer) 
 {
-	
-
 	///TODO: Implement this function as mentioned in the guideline steps (numbered below) below
-
 
 	// == Here are some guideline steps (numbered below) to implement this function ==
 	Output *pOut = pGrid->GetOutput();//Get Output
@@ -50,6 +47,12 @@ CellPosition Ladder::GetEndPosition() const
 {
 	return endCellPos;
 }
+
+CellPosition Ladder::GetStartPosition() const {
+	//the startcell position is the position object of the gameObject Parent
+	return GetPosition();
+}
+
 void  Ladder::Save(ofstream& OutFile, type T)
 {
 	if (T == ladder)

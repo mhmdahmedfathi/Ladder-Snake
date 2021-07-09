@@ -9,9 +9,8 @@ class AddLadderAction : public Action
 	// [Action Parameters]
 	CellPosition startPos; // 1- The start position of the ladder
 	CellPosition endPos;   // 2- The end position of the ladder
-	bool Valid = true; //Check The Validity Of the input
-	// Note: These parameters should be read in ReadActionParameters()
-
+	bool Valid = true;	   //Check The Validity Of the input
+	
 public:
 
 	AddLadderAction(ApplicationManager *pApp); // A Constructor
@@ -21,7 +20,6 @@ public:
 	virtual void Execute(); // Creates a new Ladder Object 
 	                        // then Sets this Ladder object to the GameObject Pointer of its Cell
 	
-
 	virtual ~AddLadderAction(); // Virtual Destructor
 
 };

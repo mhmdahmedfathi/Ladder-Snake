@@ -156,7 +156,6 @@ GameObject* Grid::GetGameObjects(const CellPosition& position)
 		GameObject* pObject = CellList[i][startH]->GetGameObject();
 			if (pObject != NULL)
 				return pObject;
-             // because in the next above rows, we will search from the first left cell (hCell = 0) to the right
 	}
 	return NULL; // not found
 
