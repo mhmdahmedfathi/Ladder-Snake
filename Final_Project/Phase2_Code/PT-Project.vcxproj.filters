@@ -138,129 +138,129 @@
     <ClCompile Include="CMUgraphicsLib\colors.cpp">
       <Filter>CMUgraphicsLib</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player\Player.cpp">
       <Filter>Player</Filter>
     </ClCompile>
-    <ClCompile Include="ApplicationManager.cpp">
+    <ClCompile Include="Actions\Action.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AddCardAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AddLadderAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AddSnakeAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\CopyCardAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\CutCardAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\DeleteGameObjectAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\EditCardAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\InputDiceValue.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\NewGame.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\OpenGridAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\PasteCardAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\RollDiceAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\SaveGridAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\SwitchToDesignModeAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\SwitchToPlayModeAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid\Grid.cpp">
+      <Filter>Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid\Cell.cpp">
+      <Filter>Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Snake.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Ladder.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\GameObject.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\Card.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardEight.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardEleven.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardFive.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardFour.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardFourteen.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardNine.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardOne.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardSeven.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardSix.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardTen.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardThirteen.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardThree.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\Cardtwelve.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects\Cards\CardTwo.cpp">
+      <Filter>GameObjects\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIClasses\CellPosition.cpp">
+      <Filter>GUIClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIClasses\Input.cpp">
+      <Filter>GUIClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIClasses\Output.cpp">
+      <Filter>GUIClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationManager\ApplicationManager.cpp">
       <Filter>ApplicationManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Action.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Card.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="Ladder.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="AddLadderAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="CardOne.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="AddCardAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="Grid.cpp">
-      <Filter>Grid</Filter>
-    </ClCompile>
-    <ClCompile Include="RollDiceAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="CellPosition.cpp">
-      <Filter>GUIClasses</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>GUIClasses</Filter>
-    </ClCompile>
-    <ClCompile Include="Output.cpp">
-      <Filter>GUIClasses</Filter>
-    </ClCompile>
-    <ClCompile Include="InputDiceValue.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="NewGame.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="AddSnakeAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="Snake.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Cardtwelve.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardThirteen.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardTen.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardFourteen.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardEleven.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="Cell.cpp">
-      <Filter>Grid</Filter>
-    </ClCompile>
-    <ClCompile Include="CardTwo.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardThree.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardSix.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardSeven.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardNine.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardFour.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardFive.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CardEight.cpp">
-      <Filter>GameObjects\Cards</Filter>
-    </ClCompile>
-    <ClCompile Include="CopyCardAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="CutCardAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="PasteCardAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="SwitchToPlayModeAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="SwitchToDesignModeAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="EditCardAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="SaveGridAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="OpenGridAction.cpp">
-      <Filter>Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="DeleteGameObjectAction.cpp">
-      <Filter>Actions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -324,132 +324,132 @@
     <ClInclude Include="CMUgraphicsLib\jpeg\jversion.h">
       <Filter>CMUgraphicsLib\JPEG</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
+    <ClInclude Include="DEFS.h" />
+    <ClInclude Include="Player\Player.h">
       <Filter>Player</Filter>
     </ClInclude>
-    <ClInclude Include="ApplicationManager.h">
+    <ClInclude Include="Actions\Action.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AddCardAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AddLadderAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AddSnakeAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\CopyCardAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\CutCardAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\DeleteGameObjectAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\EditCardAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\InputDiceValue.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\NewGame.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\OpenGridAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\PasteCardAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\RollDiceAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\SaveGridAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\SwitchToDesignModeAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\SwitchToPlayModeAction.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid\Grid.h">
+      <Filter>Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid\Cell.h">
+      <Filter>Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Snake.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Ladder.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\GameObject.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\Card.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardEight.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardEleven.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardFive.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardFour.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardFourteen.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardNine.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardOne.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardSeven.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardSix.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardTen.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardThirteen.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardThree.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\Cardtwelve.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects\Cards\CardTwo.h">
+      <Filter>GameObjects\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIClasses\CellPosition.h">
+      <Filter>GUIClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIClasses\Input.h">
+      <Filter>GUIClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIClasses\Output.h">
+      <Filter>GUIClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIClasses\UI_Info.h">
+      <Filter>GUIClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationManager\ApplicationManager.h">
       <Filter>ApplicationManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Action.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Card.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardOne.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="Ladder.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="AddLadderAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="AddCardAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="Grid.h">
-      <Filter>Grid</Filter>
-    </ClInclude>
-    <ClInclude Include="Cell.h">
-      <Filter>Grid</Filter>
-    </ClInclude>
-    <ClInclude Include="RollDiceAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="CellPosition.h">
-      <Filter>GUIClasses</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>GUIClasses</Filter>
-    </ClInclude>
-    <ClInclude Include="Output.h">
-      <Filter>GUIClasses</Filter>
-    </ClInclude>
-    <ClInclude Include="UI_Info.h">
-      <Filter>GUIClasses</Filter>
-    </ClInclude>
-    <ClInclude Include="DEFS.h" />
-    <ClInclude Include="InputDiceValue.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="NewGame.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="AddSnakeAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="Snake.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Cardtwelve.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardThirteen.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardTen.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardFourteen.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardEleven.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardTwo.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardSix.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardSeven.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardNine.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardFour.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardFive.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardEight.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CardThree.h">
-      <Filter>GameObjects\Cards</Filter>
-    </ClInclude>
-    <ClInclude Include="CopyCardAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="CutCardAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="PasteCardAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="SwitchToPlayModeAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="SwitchToDesignModeAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="EditCardAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="SaveGridAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="OpenGridAction.h">
-      <Filter>Actions</Filter>
-    </ClInclude>
-    <ClInclude Include="DeleteGameObjectAction.h">
-      <Filter>Actions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
