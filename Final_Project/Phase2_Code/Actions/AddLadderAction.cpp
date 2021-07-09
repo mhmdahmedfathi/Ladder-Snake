@@ -101,6 +101,13 @@ void AddLadderAction::ReadActionParameters()
 	endPos = pIn->GetCellClicked();
 	
 	// Check its Validation relative to the start cell
+	if (endPos.HCell() != startPos.HCell()) {
+		pOut->PrintMessage("Invalid: the start and end cell should be in the same column. Click to Continue...");
+		pIn->GetPointClicked(x, y);
+		pOut->ClearStatusBar();
+		Valid = false;
+		return;
+	}
 	if (endPos.VCell() >= startPos.VCell())
 	{
 		pOut->PrintMessage("Invalid: End cell can't be below or on the start cell. Click to Continue...");

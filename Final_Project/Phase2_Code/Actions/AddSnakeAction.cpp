@@ -4,6 +4,7 @@
 #include "../GUIClasses/Output.h"
 #include "../GameObjects/Snake.h"
 #include "../GameObjects/Ladder.h"
+#include "../GameObjects/Cards/Card.h"
 
 AddSnakeAction::AddSnakeAction(ApplicationManager* pApp) : Action(pApp)
 {
@@ -99,7 +100,15 @@ void AddSnakeAction::ReadActionParameters()
 	// Read the endPos parameter
 	pOut->PrintMessage("New Snake: Click on its End Cell ...");
 	endPos = pIn->GetCellClicked();
-	// Check its Validation
+	// Check its Validation relative to the start cell
+	if (endPos.HCell() != startPos.HCell()) 
+	{
+		pOut->PrintMessage("Invalid: the start and end cell should be in the same column. Click to Continue...");
+		pIn->GetPointClicked(x, y);
+		pOut->ClearStatusBar();
+		Valid = false;
+		return;
+	}
 	if (endPos.VCell() < startPos.VCell())
 	{
 		pOut->PrintMessage("end cell cannot be smaller than start cell");
@@ -118,7 +127,7 @@ void AddSnakeAction::ReadActionParameters()
 		if (pGameobject != NULL)
 		{
 			NextSnakeStart = pGameobject->GetPosition();//get a pointer to start of the snake
-			if (endPos.GetCellNum() == NextSnakeStart.GetCellNum())
+			if (endPos.GetCellNum() == NextSnakeStart.GetCellNum() && dynamic_cast<Card*>(pGameobject) == NULL)
 			{
 				pOut->PrintMessage("end cell cannot be a start of another ladder or snake");
 				pIn->GetPointClicked(x, y);
