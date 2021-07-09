@@ -35,22 +35,28 @@ void PasteCardAction::Execute()
 	Card::CountCard++;
 	Grid* pGrid = pManager->GetGrid();
 
+
 	Card* pCard = NULL;		// will point to a card if exists in the same clicked cell
 	Ladder* pLadder = NULL; // will point to a ladder if exists in the same clicked cell
 	Snake* pSnake = NULL; // will point to a ladder if exists in the same clicked cell
 	
 	//VALIDATIONS
-	//checking if there was a card in the same clicked cell
+	//checking the validity of the cell position clicked
+	if (newCardPosition.GetCellNum() == 1) {
+		pGrid->PrintErrorMessage("Invalid Pasting Position: Check card's specification. Click to Continue...");
+	}
+
+	//checking if there was a card/ladder/snake in the same clicked cell
 	pCard = pGrid->HasCard(newCardPosition);
 	pLadder = pGrid->HasLadder(newCardPosition);
 	pSnake = pGrid->HasSnake(newCardPosition);
 
 	if (pCard != NULL)
-		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that already contains a CARD!");
+		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that already contains a CARD! Click to Continue...");
 	else if (pLadder != NULL)
-		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that contains a start of a LADDER!");
+		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that contains a start of a LADDER! Click to Continue...");
 	else if (pSnake != NULL)
-		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that contains a start of a SNAKE!");
+		pGrid->PrintErrorMessage("Invalid Paste: You've clicked on a cell that contains a start of a SNAKE! Click to Continue...");
 	else
 	{
 		pCard = pGrid->GetClipboard();

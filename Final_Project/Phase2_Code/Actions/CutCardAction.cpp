@@ -40,7 +40,7 @@ void CutCardAction::Execute()
 		
 		pGrid->SetClipboard(pCard);
 		pGrid->RemoveObjectFromCell(cardPosition);
-		pGrid->PrintErrorMessage("The card has been successfully cut.");
+		pGrid->PrintErrorMessage("The card has been successfully cut. Click to refresh...");
 		
 	}
 	else

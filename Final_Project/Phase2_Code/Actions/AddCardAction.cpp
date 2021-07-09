@@ -42,7 +42,7 @@ void AddCardAction::ReadActionParameters()
 
 	//Validation
 	if (cardNum < 1 || cardNum>14) {
-		pOut->PrintMessage("Invalid Card Number, Cards have Numbers from 1-14, Operation cancelled, click to continue... ");
+		pGrid->PrintErrorMessage("Invalid Card Number, Cards have Numbers from 1-14, Operation cancelled, click to continue... ");
 		cardNumber = -1;
 		return; 
 	}
@@ -156,7 +156,7 @@ void AddCardAction::Execute()
 				Output* pOut = pGrid->GetOutput();
 
 				//We cannot add it if there is an existing gamObject or if we want to add it to the first or the last cell
-				pGrid->PrintErrorMessage("Invalid position, check card's instructions, Click to continue..");
+				pGrid->PrintErrorMessage("Invalid position: check card's instructions. Click to Continue...");
 				delete pCard;
 				pOut->ClearStatusBar();
 
