@@ -37,6 +37,11 @@ public:
 						  // It returns true, if the parameter is valid and the setting is applied, 
 	                      // Otherwise, return false with no setting
 
+	bool RemoveVCell(); // Remove vCell of the cell position in order not to be counted
+
+	///TODO: IMPLEMENT THE FOLLOWING FUNCTION
+	bool RemoveHCell(); // Remove HCell of the cell position in order not to be counted
+	
 	int VCell() const; // The getter of vCell
 	int HCell() const; // The getter of hCell
 

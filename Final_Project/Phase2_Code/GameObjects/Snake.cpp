@@ -69,4 +69,5 @@ void  Snake::Load(ifstream& Infile)
 
 Snake::~Snake()
 {
+	CountSnake--;
 }

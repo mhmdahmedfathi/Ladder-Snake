@@ -31,6 +31,9 @@ CellPosition::CellPosition (int cellNum)
 bool CellPosition::SetVCell(int v) 
 {
 	//Done///TODO: Implement this function as described in the .h file (don't forget the validation)
+	
+	
+	
 	if (v >= 0 && v <= 8)
 	{
 		vCell = v;
@@ -55,6 +58,18 @@ bool CellPosition::SetHCell(int h)
 	else{
 		return false; // this line sould be changed with your implementation
 	}
+}
+
+bool CellPosition::RemoveVCell()
+{
+	vCell = -1;
+	return true;
+}
+
+bool CellPosition::RemoveHCell()
+{
+	hCell = -1;
+	return true;
 }
 
 int CellPosition::VCell() const 

@@ -192,6 +192,7 @@ void AddSnakeAction::Execute()
 		// if the GameObject cannot be added
 		if (!added)
 		{
+			delete pSnake;
 			// Print an appropriate message
 			pGrid->PrintErrorMessage("Error: Cell already has an object ! Click to continue ...");
 		}

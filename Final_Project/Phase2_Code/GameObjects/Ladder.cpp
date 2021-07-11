@@ -74,4 +74,5 @@ void Ladder::Load(ifstream& Infile)
 }
 Ladder::~Ladder()
 {
+	CountLadder--;
 }

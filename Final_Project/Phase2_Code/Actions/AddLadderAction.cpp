@@ -58,6 +58,7 @@ void AddLadderAction::ReadActionParameters()
 		{
 			if (psnake->GetEndPosition().GetCellNum() == startPos.GetCellNum()) {
 				pOut->PrintMessage("Invalid: Start cell can't be an end of a snake. Click to Continue...");
+				StartPos.RemoveVCell();
 				pIn->GetPointClicked(x, y);
 				pOut->ClearStatusBar();
 				Valid = false;
@@ -88,6 +89,7 @@ void AddLadderAction::ReadActionParameters()
 				else {
 					continue;
 				}
+				StartPos.RemoveVCell();
 				pIn->GetPointClicked(x, y);
 				pOut->ClearStatusBar();
 				Valid = false;
@@ -133,9 +135,11 @@ void AddLadderAction::ReadActionParameters()
 				if (endPos.VCell() < NextLadderStart.VCell())
 				{
 					pOut->PrintMessage("Two ladders cannot overlap. Click to Continue...");
+					StartPos.RemoveVCell();
 				}
 				else if (endPos.VCell() == NextLadderStart.VCell()) {
 					pOut->PrintMessage("End cell cannot be a start of another ladder. Click to Continue...");
+					StartPos.RemoveVCell();
 				}
 				else {
 					continue;
@@ -185,6 +189,7 @@ void AddLadderAction::Execute()
 		// if the GameObject cannot be added
 		if (!added)
 		{
+			delete pLadder;
 			// Print an appropriate message
 			pGrid->PrintErrorMessage("Error: Cell already has an object ! Click to continue ...");
 		}
